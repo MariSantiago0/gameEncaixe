@@ -54,3 +54,12 @@ document.addEventListener('keydown', (e) => {
 
   dragElement.style.transform = `rotate(${rotationAngle}deg) scale(${scaleValue})`;
 });
+
+
+//perguntas das medidas
+alert("Duplique o tamanho do gato");
+
+function questions(answer){
+let takeAnswer = answer.keyCode;
+if (takeAnswer == )
+}
