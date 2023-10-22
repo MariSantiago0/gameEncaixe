@@ -1,5 +1,11 @@
 # gameObedeça
-Esse é um jogo que explora os conceitos de transform, rotate e move do Javascript. No jogo, o usuário precisa seguir as instruções para que ele seja concluído.
+Esse projeto é um jogo feito com Javascript que contém os seguintes conceitos:
+<ul>
+    <li> Transform (aumenta e diminuir imagem) </li>
+    <li> Rotate (rotaciona e diminuir imagem) </li>
+    <li> Move (movimenta e diminuir imagem) </li>
+</ul>
+E neste jogo, o usuário precisa seguir as intruções para que o jogo possa ser finalizado com sucesso.
 
 ## Autores
 Mariana Santiago e Yuri Telis
