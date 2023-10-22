@@ -18,3 +18,6 @@ Por fim, no Javascript são programados os event listeners que vão movimentar, 
 
 ## Diagrama de Classes
 <img src = "jogoObedeca/imgs/diagramaclasses.png">
+
+## Print dos Comandos
+<img src = "jogoObedeca/imgs/gitcomandoss.png">
