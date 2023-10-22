@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      canvas {
+        border: 2px solid white;
+        background-color: pink;
+        padding: 20px 40px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(255, 0, 150, 0.5);
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="startButton" width="150" height="50"></canvas>
+    <script>
+      const canvas = document.getElementById("startButton");
+      const ctx = canvas.getContext("2d");
+
+      canvas.addEventListener("click", function () {
+        // Ação a ser executada quando o botão é clicado (substitua pelo seu próprio código)
+        window.location.href = "jogo.html";
+      });
+
+      // Estilo de arcade
+      ctx.font = "30px 'Press Start 2P', cursive";
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+      ctx.fillStyle = "white";
+      ctx.fillText("Iniciar", canvas.width / 2, canvas.height / 2);
+    </script>
+  </body>
+</html>
