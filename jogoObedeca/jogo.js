@@ -119,6 +119,7 @@ element.addEventListener("drag", function(event) {
   setTimeout(proximaPergunta, 2000);
 });
 
+// função para reiniciar o jogo quando a tecla K for pressionada
 document.addEventListener("keydown", function (event) {
   if (event.key === "k" || event.key === "K") {
   window.location.reload();
