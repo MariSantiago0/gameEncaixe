@@ -1,4 +1,4 @@
-# gameObedeça
+# gameObedeça - Transformações
 Esse projeto é um jogo feito com Javascript que contém os seguintes conceitos:
 <ul>
     <li> Transform (aumenta e diminuir imagem) </li>
