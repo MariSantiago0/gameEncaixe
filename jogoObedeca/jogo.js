@@ -1,41 +1,65 @@
+
+const canvas =  document.getElementById('element');
+        const ctx = canvas.getContext('2d');
 
-// Linha de código para arrastar a img para os lados e de cima para baixo
-const dragElement = document.getElementById('element');
-let isDragging = false;
-let offsetX, offsetY;
+        // Carregando a imagem
+        const image = new Image();
+        image.src = 'pinkie.png';
 
-//verificação do arrasto da img
-dragElement.addEventListener('mousedown', (e) => {
-  isDragging = true;
-  offsetX = e.clientX - dragElement.getBoundingClientRect().left;// verifica onde vc apertou na img para calcular onde vc pode levar ela, representa a linha horizontal em pixels (e.clientX)
-  offsetY = e.clientY - dragElement.getBoundingClientRect().top;
-  dragElement.style.cursor = 'grabbing';
-});
+        // Posição inicial da imagem
+        let x = 0;
+        let y = 0;
 
-//onde a img é movida
-document.addEventListener('mousemove', (e) => {
-  if (isDragging) {
-    const x = e.clientX - offsetX;// subtraindo a posição do cursor do mouse pela posição inicial do elemento
-    const y = e.clientY - offsetY;
+        // Quando a imagem estiver carregada, desenhe-a no Canvas
+        image.onload = function () {
+            ctx.drawImage(image, x, y);
+        };
 
-    dragElement.style.left = x + 'px';
-    dragElement.style.top = y + 'px';
-  }
-});
+        // Função para apagar o Canvas
+        function clearCanvas() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
 
-// é acionado quando o usuário solta o botão do mouse após clicar em algum elemento
-document.addEventListener('mouseup', () => {
-  isDragging = false;
-  dragElement.style.cursor = 'grab';
-});
+        // Função para mover a imagem para a esquerda
+        function moveLeft() {
+            clearCanvas();
+            x -= 10; // Altere a quantidade que desejar
+            ctx.drawImage(image, x, y);
+        }
 
-// verifica se a img esta solta ou não
-document.addEventListener('mouseleave', () => {
-  if (isDragging) {
-    isDragging = false;
-    dragElement.style.cursor = 'grab';
-  }
-});
+        // Função para mover a imagem para a direita
+        function moveRight() {
+            clearCanvas();
+            x += 10; // Altere a quantidade que desejar
+            ctx.drawImage(image, x, y);
+        }
+
+        // Função para mover a imagem para cima
+        function moveUp() {
+            clearCanvas();
+            y -= 10; // Altere a quantidade que desejar
+            ctx.drawImage(image, x, y);
+        }
+
+        // Função para mover a imagem para baixo
+        function moveDown() {
+            clearCanvas();
+            y += 10; // Altere a quantidade que desejar
+            ctx.drawImage(image, x, y);
+        }
+
+        // Event listeners para as teclas de seta
+        window.addEventListener('keydown', function (e) {
+            if (e.key === 'ArrowLeft') {
+                moveLeft();
+            } else if (e.key === 'ArrowRight') {
+                moveRight();
+            } else if (e.key === 'ArrowUp') {
+                moveUp();
+            } else if (e.key === 'ArrowDown') {
+                moveDown();
+            }
+        });
 
 // Linha de código para rotacionar, aumentar e diminuir a img 
 let rotationAngle = 0;
