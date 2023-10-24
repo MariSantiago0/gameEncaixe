@@ -31,9 +31,10 @@ No JavaScript é feito uma função para o canvas e todo o jogo. Essa função p
 <img src = "transforms/imgs/jogo2.png">
 <img src = "transforms/imgs/jogo3.png">
 <img src = "transforms/imgs/jogo4.png">
+<img src = "transforms/imgs/jogo5.png">
 
 ## Diagrama de Classes
-<img src = "jogoObedeca/imgs/diagramaclasses.png">
+<img src = "transforms/imgs/diagramaclasses.png">
 
 ## Print dos Comandos
-<img src = "jogoObedeca/imgs/gitcomandos.png">
+<img src = "transforms/imgs/gitcomandos.png">
