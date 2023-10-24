@@ -1,14 +1,17 @@
-
-const canvas =  document.getElementById('element');
+
+
+        const canvas =  document.getElementById('element');
         const ctx = canvas.getContext('2d');
 
         // Carregando a imagem
-        const image = new Image();
-        image.src = 'pinkie.png';
-
+        let image = new Image();
+        image.src = "imgs/pinkie.jpg";
+    
         // Posição inicial da imagem
         let x = 0;
         let y = 0;
+        ctx.drawImage(image, 20, 20);
+
 
         // Quando a imagem estiver carregada, desenhe-a no Canvas
         image.onload = function () {
@@ -17,8 +20,8 @@ const canvas =  document.getElementById('element');
 
         // Função para apagar o Canvas
         function clearCanvas() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-        }
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+      }
 
         // Função para mover a imagem para a esquerda
         function moveLeft() {

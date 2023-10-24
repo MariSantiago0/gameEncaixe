@@ -12,11 +12,11 @@ h1 {
     display: flex;
     align-items: center; /* Centraliza verticalmente */
     border-style: solid;
+    justify-content: center;
     border-color: rgb(239, 160, 247);
     border-width: 5px;
-    max-width: 100%;
-    width: 810px;
-    height: 550px;
+    width: 800px;
+    height: 600px;
 }
 
 .texto{
@@ -50,6 +50,7 @@ h1 {
 
 .Canvas{
 border: 1px solid #000;
+flex:1;
 }
 
 
